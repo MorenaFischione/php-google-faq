@@ -26,14 +26,14 @@ $faqs = [
     ],
 ];
 
-// echo "<pre>";
-// var_dump($faqs);
-// echo "</pre>"
+echo "<pre>";
+var_dump($faqs);
+echo "</pre>"
 
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,8 +43,10 @@ $faqs = [
 <body>
     <ul>
         <?php foreach($faqs as $faq) { ?>
-            <li> <?php echo $faqs["domanda"]; ?>
+            <li> <?php echo $faq["domanda"]; ?>
              </li>
+            <li>  <?php echo $faq["risposta"]; ?>
+            </li>
         <?php } ?>   
     </ul>
 </body>
