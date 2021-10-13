@@ -26,9 +26,9 @@ $faqs = [
     ],
 ];
 
-echo "<pre>";
-var_dump($faqs);
-echo "</pre>"
+// echo "<pre>";
+// var_dump($faqs);
+// echo "</pre>"
 
 ?>
 
@@ -38,17 +38,35 @@ echo "</pre>"
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>PHP GOOGLE FAQ</title>
 </head>
 <body>
-    <ul>
-        <?php foreach($faqs as $faq) { ?>
-            <li> <?php echo $faq["domanda"]; ?>
-             </li>
-            <li>  <?php echo $faq["risposta"]; ?>
-            </li>
-        <?php } ?>   
-    </ul>
+    <header>
+        <div>
+            <img src="https://e7.pngegg.com/pngimages/450/1024/png-clipart-google-logo-google-search-console-google-adwords-google-search-engine-optimization-text.png" alt="logo google">  
+        </div>
+        <div>
+            <ul class="nav">
+                <li><p>Introduzione</p></li>
+                <li><p>Norme sulla Privacy</p></li>
+                <li><p>Termini di servizi</p></li>
+                <li><p>Tecnologie</p></li>
+                <li><p>Domande frequenti</p></li>
+            </ul>
+        </div>
+        <hr>
+    </header>
+    <main class="container">
+        <ul>
+            <?php foreach($faqs as $faq) { ?>
+                <li> <h3 class="domande"><?php echo $faq["domanda"]; ?></h3>    
+                </li>
+                <li> <p class="risposte"><?php echo $faq["risposta"]; ?> </p> 
+                </li>
+            <?php } ?>   
+        </ul>
+    </main>
 </body>
 </html>
 
